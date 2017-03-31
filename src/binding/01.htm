@@ -7,14 +7,28 @@
 
 </head>
 <body ng-app="app">
-<h1>Example of one-way binding</h1>
+<h1>This page will contain all examples related to Angular Binding</h1>
+
+<h2>Example of one-way binding</h2>
 <div ng-controller="emp">
 	Value of a: {{a}}
 	Value of b: {{b}}
 <hr>
 Value of a through ng-bind is: <span ng-bind="a"></span> <br>
-Value of b through ng-bind is: <span ng-bind="b"></span>
+Value of b through ng-bind is: <span ng-bind="b"></span><br>
+Sum : <span ng-bind="sum"></span><br>
 
+<button ng-click="doDoubleAndSum()">Calculate</button>
+<hr>
+<h2>Example of Initial Binding or One time binding</h2>
+Value of a initialy set was: {{::a}}
+
+
+<h2>Example of two way binding</h2>
+	Value of a: {{a}}, but you can modify a : <input type="text" ng-model="a"><br>
+	Value of b: {{b}}, but you can modify b : <input type="text" ng-model="b"> <br>
+	Sum of a+b: {{sum2}} <br>
+	<button ng-click="doSum()">Calculate</button>
 </div>
 
 </body>
