@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module("sample",[]).run(["$rootScope", function($rootScope){
+$rootScope.GlobalName = "Aggarwal";
+}]);
+app.controller("test",["$scope", function($scope){
+$scope.Name="Shivendra";
+$scope.Cmp="3Pillar"
+}]);
+
+app.controller("testInner",["$scope","$rootScope", function($scope, $rootScope){
+	$scope.Name="Shivendra Inner";
+	$scope.Address="F1201";
+	$rootScope.AnotherGlobal = "Aggarwal Inner";
+}]);
+</script>
+</head>
+<body ng-app="sample">
+
+	{{3+4}}
+	
+	</n> This is my first controller:
+	<div ng-controller="test">
+	{{Name}} looks like you are working with {{Cmp}} and your global name is {{GlobalName}}
+	Lets see if we can try inner global here: {{AnotherGlobal}}
+	<div ng-controller="testInner">
+		Name: {{Name}} , Address: {{Address}}, this is Global: {{AnotherGlobal}}
+	</div>
+	</div>
+</body>
+</html>
