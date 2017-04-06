@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="01.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller = "emp">
+	<div>
+		Value of a is {{a}},
+		change value of a here
+		<input type="text" ng-model="a"/><br>
+		Value of b is {{b}},
+		change value of b here
+		<input type="text" ng-model="b"/><br>
+		<hr>
+		Sum: {{sum}}
+		<br>
+		<button ng-click="doSum()">Calculate</button>
+	</div>
+
+</div>
+
+</body>
+</html>
