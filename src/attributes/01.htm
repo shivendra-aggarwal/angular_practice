@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="01.js"></script>
+</head>
+<body ng-app="app">
+
+<div ng-controller="emp">
+	<form class="form-inline">
+		<div class="form-group">
+			<label>Enter Employee No:</label>
+			<input type="text" class="form-control" ng-model="searchEmpNo">
+		</div>
+		<button class="btn btn-primary" ng-click="doSearch()">Search</button>
+	</form>
+	<hr>
+	<div class="row">
+		<div class="col-sm-2"> Employee No</div>
+		<div class="col-sm-2"> {{empno}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Name</div>
+		<div class="col-sm-2"> {{name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Salary</div>
+		<div class="col-sm-2"> {{sal}}
+			<span ng-if="isSalAbove1K" class="glyphicon glyphicon-warning-sign"></span>
+
+			<!--<span ng-if="sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+
+			<!--<span ng-show="sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+
+			<!--<span ng-hide="sal == undefined || sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Department No</div>
+		<div class="col-sm-2"> {{depno}}</div>
+	</div>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>#</td>
+				<td>Name</td>
+				<td>Salary</td>
+				<td>Department</td>
+			</tr>
+		</thead>
+		<tr ng-repeat="emp in employees">
+			<td>{{emp.empno}}</td>
+			<td>{{emp.name}}</td>
+			<td>{{emp.sal}}
+			<span ng-if="emp.sal > 1000" class="glyphicon glyphicon-warning-sign"></span></td>
+			<td>{{emp.depno}}</td>
+		</tr>
+
+	</table>
+</div>
+
+</body>
+</html>
