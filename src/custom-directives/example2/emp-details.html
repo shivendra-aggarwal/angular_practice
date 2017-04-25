@@ -1,0 +1,24 @@
+<div class="row">
+		<div class="col-sm-2"> Employee No</div>
+		<div class="col-sm-2"> {{empno}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Name</div>
+		<div class="col-sm-2"> {{name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Salary</div>
+		<div class="col-sm-2"> {{sal}}
+			<span ng-if="isSalAbove1K" class="glyphicon glyphicon-warning-sign"></span>
+
+			<!--<span ng-if="sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+
+			<!--<span ng-show="sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+
+			<!--<span ng-hide="sal == undefined || sal > 1000" class="glyphicon glyphicon-warning-sign"></span>-->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"> Department No</div>
+		<div class="col-sm-2"> {{depno}}</div>
+	</div>
