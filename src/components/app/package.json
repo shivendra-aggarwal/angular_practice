@@ -1,0 +1,14 @@
+{
+  "name": "MovieApp",
+  "version": "0.0.0",
+  "description": "A movie list app with its review",
+  "main": "server.js",
+  "author": {
+    "name": "Shivendra",
+    "email": "shivendra.aggarwal@gmail.com"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {}
+}
