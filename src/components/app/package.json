@@ -10,5 +10,8 @@
   "dependencies": {
     "express": "^4.15.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-nodemon": "^0.4.2"
+  }
 }
